@@ -139,7 +139,7 @@ function PrefixFilter_is_installed()
 {
 	global $db;
 
-	$query = $db->simple_select('themestylesheets', 'sid', "name='PrefixFilter.css'");
+	$query = $db->simple_select('settinggroups', 'gid', "name='PrefixFilter'");
 	return ($db->num_rows($query) > 0);
 }
 
